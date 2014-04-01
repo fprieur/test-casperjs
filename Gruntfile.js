@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 				'<%= nodeunit.tests %>'
 			]
 		},
-	    ghost: {
+        ghost: {
 			test: {
 				files: [{
 					src: ['tests/ghost/*_test.js']
@@ -20,8 +20,7 @@ module.exports = function(grunt) {
 			},
 			options: {
 				args: {
-					baseUrl: 'http://localhost:' +
-						'<%= connect.www.options.port %>/'
+					baseUrl: 'http://donnees.montreal.qc.ca:' 
 				},
 				direct: false,
 				logLevel: 'error',
