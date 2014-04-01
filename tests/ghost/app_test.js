@@ -1,14 +1,11 @@
 casper
 .start(casper.cli.get('baseUrl'))
 .then(function () {
-	this.test.assertTitle('Gougel', 'Make sure the title is set');
-	this.test.assertExists('.balance', 'Check if the balance is set');
-	this.fill('form', {
-		q: 'foo'
-	}, true);
-})
-.then(function () {
-	this.test.assertUrlMatch(/www.google.com/, 'Forward the query to Google');
+	    var start=Date.now();
+        this.waitUntilVisible("footer", function () {
+        casper.echo("Footer became visible in " + ( Date.now()-start) + " ms", "INFO_BAR");
+    });
+   
 })
 .run(function () {
 	this.test.done();
