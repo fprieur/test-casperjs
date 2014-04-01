@@ -9,7 +9,6 @@ module.exports = function(grunt) {
 				'Gruntfile.js',
 				'package.json',
 				'source/**/*.js',
-				'<%= nodeunit.tests %>'
 			]
 		},
         ghost: {
