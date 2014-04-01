@@ -12,19 +12,7 @@ module.exports = function(grunt) {
 				'<%= nodeunit.tests %>'
 			]
 		},
-		nodeunit: {
-			tests: ['tests/nodeunit/*_test.js']
-		},
-		connect: {
-			www: {
-				options: {
-					// keepalive: true,
-					base: 'source',
-					port: 4545
-				}
-			}
-		},
-		ghost: {
+	    ghost: {
 			test: {
 				files: [{
 					src: ['tests/ghost/*_test.js']
@@ -42,11 +30,8 @@ module.exports = function(grunt) {
 			}
 		}
 	});
-	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-nodeunit');
 	grunt.loadNpmTasks('grunt-ghost');
 
-	grunt.registerTask('test', ['jshint', 'nodeunit', 'connect', 'ghost']);
-	grunt.registerTask('default', ['connect']);
+	grunt.registerTask('test', ['jshint', 'ghost']);
 };
