@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 			files: [
 				'Gruntfile.js',
 				'package.json',
-				'source/**/*.js',
+				'source/**/*.js'
 			]
 		},
         ghost: {
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 			},
 			options: {
 				args: {
-					baseUrl: 'http://donnees.montreal.qc.ca:' 
+					baseUrl: 'http://donnees.montreal.qc.ca'
 				},
 				direct: false,
 				logLevel: 'error',
