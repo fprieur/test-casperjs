@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 			},
 			options: {
 				args: {
-					baseUrl: 'http://donnees.montreal.qc.ca:' +
+					baseUrl: 'http://donnees.montreal.qc.ca:' 
 				},
 				direct: false,
 				logLevel: 'error',
