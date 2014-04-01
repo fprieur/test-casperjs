@@ -1,11 +1,7 @@
 casper
 .start(casper.cli.get('baseUrl'))
 .then(function () {
-	    var start=Date.now();
-        this.waitUntilVisible("footer", function () {
-        casper.echo("Footer became visible in " + ( Date.now()-start) + " ms", "INFO_BAR");
-    });
-   
+    this.test.assertTitle("Portail données ouvertes", "le titre est bien celui que l'on attendait");    
 })
 .run(function () {
 	this.test.done();
